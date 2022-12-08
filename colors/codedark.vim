@@ -109,6 +109,9 @@ let s:cdDiffBlue = {'gui': '#005f87', 'cterm': s:cterm0D, 'cterm256': '24'}
 let s:cdSearchCurrent = {'gui': '#4B5632', 'cterm': s:cterm09, 'cterm256': '58'} 
 let s:cdSearch = {'gui': '#264F78', 'cterm': s:cterm03, 'cterm256': '24'}
 
+let s:cdInfoUnderlineBlue = {'gui': '#358cf0', 'cterm': s:cterm0C, 'cterm256': '117'}
+
+
 " Syntax colors:
 
 if !exists("g:codedark_conservative")
@@ -236,10 +239,10 @@ call <sid>hi('Error', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
 
 call <sid>hi('Todo', s:cdNone, s:cdLeftMid, 'none', {})
 
-call <sid>hi('SpellBad', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
-call <sid>hi('SpellCap', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
-call <sid>hi('SpellRare', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
-call <sid>hi('SpellLocal', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
+call <sid>hi('SpellBad', {}, {}, 'undercurl', cdInfoUnderlineBlue)
+call <sid>hi('SpellCap', {}, {}, 'undercurl', cdInfoUnderlineBlue)
+call <sid>hi('SpellRare', {}, {}, 'undercurl', cdInfoUnderlineBlue)
+call <sid>hi('SpellLocal', {}, {}, 'undercurl', cdInfoUnderlineBlue)
 
 
 " Neovim Treesitter:
